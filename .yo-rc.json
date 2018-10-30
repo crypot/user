@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.exc",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.5.0",
+    "applicationType": "microservice",
+    "baseName": "user",
+    "packageName": "com.exc",
+    "packageFolder": "com/exc",
+    "serverPort": "8084",
+    "authenticationType": "uaa",
+    "uaaBaseName": "uaa",
+    "cacheProvider": "memcached",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "Y2M1NTU4ZWE2ZTVjMDdhNjU4Y2M0ZGI0MzkzMWMwOTM3Y2JiNDU3NzdkMGUwOTRkNjgzYTk3M2E1MmI0Y2QzNmViZWJiNDg1M2NjYzc3MzUxNzQ1ZTk3Yjg4NzJkNWU0NGIwNzYyNjI3MjE3OTM5MjQ1YTlkYjBiNTVkZDNlNzQ=",
+    "enableTranslation": true,
+    "languages": [
+      "en"
+    ],
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
