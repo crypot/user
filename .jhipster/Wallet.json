@@ -1,0 +1,36 @@
+{
+    "name": "Wallet",
+    "fields": [
+        {
+            "fieldName": "publicKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "privateKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "currencyName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "userInfo",
+            "otherEntityName": "userInfo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181106182254",
+    "javadoc": "User wallet with private key",
+    "entityTableName": "wallet",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "user",
+    "applications": "*",
+    "microserviceName": "user"
+}

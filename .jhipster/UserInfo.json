@@ -1,0 +1,72 @@
+{
+    "name": "UserInfo",
+    "fields": [
+        {
+            "fieldName": "is2Fa",
+            "javadoc": "inducate if 2fa enabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "secret",
+            "javadoc": "secret private key for 2fa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "streetAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateProvince",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countryCode",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "javadoc": "User details",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "userInfo"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "javadoc": "User kyc",
+            "relationshipName": "kyc",
+            "otherEntityName": "kYC",
+            "otherEntityField": "type",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "userInfo"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "wallet",
+            "otherEntityName": "wallet",
+            "otherEntityRelationshipName": "userInfo"
+        }
+    ],
+    "changelogDate": "20181106182252",
+    "javadoc": "UserDetails extends User",
+    "entityTableName": "user_info",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "user",
+    "applications": "*",
+    "microserviceName": "user"
+}

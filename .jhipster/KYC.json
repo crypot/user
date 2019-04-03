@@ -1,0 +1,34 @@
+{
+    "name": "KYC",
+    "fields": [
+        {
+            "fieldName": "file",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "DocumentType",
+            "fieldValues": "PASSPORT,DRIVERLICENSE"
+        },
+        {
+            "fieldName": "isValid",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "validationDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181106182253",
+    "javadoc": "user validation must be validated individually",
+    "entityTableName": "kyc",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "user",
+    "applications": "*",
+    "microserviceName": "user"
+}

@@ -1,0 +1,53 @@
+/**  UserDetails extends User */
+entity UserInfo {
+/** inducate if 2fa enabled */
+	is2Fa Boolean,
+    /** secret private key for 2fa */
+    secret String,
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String,
+    countryCode String
+}
+/** user validation must be validated individually*/
+entity KYC {
+	file String,
+    type DocumentType,
+    isValid Boolean,
+    validationDate LocalDate
+}
+
+/** User wallet with private key*/
+entity Wallet {
+    publicKey String,
+    privateKey String,
+    currencyName String
+}
+
+/** KYC document type*/
+enum DocumentType {
+	PASSPORT, DRIVERLICENSE
+}
+
+relationship OneToMany {
+    UserInfo{wallet} to Wallet
+}
+
+relationship OneToOne {
+//	OrderExecution{order} to OrderPair{exec},
+   /**User details */
+    UserInfo{user(login)} to User,
+    /**User kyc */
+    UserInfo{kyc(type)} to KYC
+
+}
+
+paginate *  with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service * with serviceClass
+// Set an angular suffix
+//angularSuffix * with mySuffix
